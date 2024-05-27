@@ -100,6 +100,9 @@ class LinkedList {
     toString(){
 
     }
+   /*  clear(){
+        this.head = null;
+    } */
 
 }
 
