@@ -54,7 +54,7 @@ class LinkedList {
         let node = this.head;
         let current = null;
         let i=1;
-        if (head === null){
+        if (this.head === null){
             console.log("no item in the linked list.")
         } else {
             while (i<=index){
@@ -113,7 +113,6 @@ class LinkedList {
     }
 
     toString(){
-        //let node = new Node(value);
         if (this.head === null) {
             console.log("No linked list.");
         } else {
@@ -135,16 +134,13 @@ class LinkedList {
         let current = this.head;
         let previous;
         
-        //let i=1;
         if (index >= lengt || index <0){
             console.log("Invalid index value");
-            //return;
         } else if (index === 0){
             this.prepend(value);
             return;
         } else if (index === lengt-1){
             this.append(value);
-            //return;
         }
         while (index--){
             previous = current;
@@ -160,11 +156,9 @@ class LinkedList {
         let lengt = this.size();
         let current = this.head;
         let previous;
-        
-        //let i=1;
+
         if (index >= lengt || index <0){
             console.log("Invalid index value");
-            //return;
         } else if (index === 0){
             this.head = this.head.nextNode;
             return;
@@ -175,15 +169,14 @@ class LinkedList {
         }
         if (index === this.tail){
             this.tail = previous;
-            //return;
         }
               
         previous.nextNode = current.nextNode;   
     }
 
-   /*  clear(){
+    clear(){
         this.head = null;
-    } */
+    }
 
 }
 
@@ -198,15 +191,23 @@ class Node {
 const list = new LinkedList();
 list.append(5); list.append('test'); list.prepend("checking");list.append("lastCh");
 list.prepend(15);
-//console.log(list);
-//console.log(list.size());
-// console.log(list.gethead()); console.log(list.tail());
-// console.log(list.at(3)); console.log(list.pop());
-// console.log(list.contains("test")); console.log(list.contains("tet"));
-// console.log(list.find("test")); console.log(list.find("checg"));
 
-//console.log(list.toString()); list.insertAt("des",2);
-//console.log(list); console.log(list.size());console.log(list.toString());
+
+console.log(list);
+console.log(list.size());
+console.log(list.gethead()); console.log(list.tail());
+console.log(list.at(3)); console.log(list.pop());
+console.log(list.contains("test")); console.log(list.contains("tet"));
+console.log(list.find("test")); console.log(list.find("checg"));
+
+console.log(list.toString()); list.insertAt("des",2);
+console.log(list); console.log(list.size());console.log(list.toString());
 console.log(list);console.log(list.toString());console.log(list.size()); 
 list.removeAt(3); 
 console.log(list.size());console.log(list.toString());
+
+
+
+
+console.log(list); console.log(list.size()); console.log(list.toString()); 
+list.clear(); console.log(list); console.log(list.size()); console.log(list.toString());
